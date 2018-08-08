@@ -1,0 +1,137 @@
+a {
+  color: $link-color;
+  transition: all .25s linear 0s;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    color: $link-color-hover
+  }
+}
+
+.control-link {
+  text-decoration: none;
+  font: bold 15px/30px Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+
+  &:before,
+  &:after {
+    font-size: 30px;
+    line-height: 30px;
+    margin: -5px 10px 0 0;
+  }
+
+  &:after {
+    margin: -5px 0 0 10px;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+    line-height: 42px;
+
+    &:before,
+    &:after {
+      font-size: 42px;
+      line-height: 42px;
+      margin: -5px 15px 0 0;
+    }
+
+    &:after {
+      margin: -5px 0 0 15px;
+    }
+  }
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(md) {
+    font-size: 48px;
+    line-height: 60px;
+    margin: 0 0 25px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0 0 20px;
+  color: $red;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0 0 30px;
+  }
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+    line-height: 24px; 
+  }
+}
+
+.hidden-xs-down {
+  display: none;
+
+  @include media-breakpoint-up(sm) {
+    display: inline;
+  }
+}
+
+.mockup-img {
+  right: -15px;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.mockup-image {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+
+  @include media-breakpoint-up(lg) {
+    margin: 0;
+  }
+}
+
+.heading {
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+  }
+
+  .wireframing & {
+    margin: 0 0 80px;
+
+    @include media-breakpoint-up(lg) {
+      width: 80%;
+    }
+  }
+}

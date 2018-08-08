@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'icons';
+  src:  url('../fonts/icons.eot?o1qroi#iefix') format('embedded-opentype'),
+        url('../fonts/icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-icon-left],
+[data-icon-right] {
+  outline: none;
+
+  &:before,
+  &:after {
+    @extend %icon;
+  }
+}
+
+[data-icon-left] {
+  &:before {
+    margin-right: 4px;
+  }
+
+  &:empty:before {
+    margin-right: 0;
+    vertical-align: top;
+  }
+}
+
+[data-icon-right] {
+  &:after {
+    margin-left: 4px;
+  }
+
+  &:empty:after {
+    margin-left: 0;
+    vertical-align: top;
+  }
+}
+
+
+[data-icon-left="icon-arrow-left-circle"]:before,
+[data-icon-right="icon-arrow-left-circle"]:after {
+  content: "\e900";
+}
+
+[data-icon-left="icon-arrow-right-circle"]:before,
+[data-icon-right="icon-arrow-right-circle"]:after {
+  content: "\e901";
+}
+
+[data-icon-left="icon-airplane"]:before,
+[data-icon-right="icon-airplane"]:after {
+  content: "\e902";
+}

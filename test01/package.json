@@ -1,0 +1,17 @@
+{
+  "name": "test-ivashchenko",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "dependencies": {
+    "bootstrap-4-grid": "^2.4.1",
+    "grunt-sass": "^3.0.1",
+    "node-sass": "^4.9.2"
+  }
+}

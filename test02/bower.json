@@ -1,0 +1,32 @@
+{
+  "name": "example-project",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Konstantin Ivashchenko <Ivaschenko87@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~1.9.1",
+    "bxslider-4": "~4.2.5",
+    "malihu-custom-scrollbar-plugin": "~3.1.5"
+  },
+  "exportsOverride": {
+    "jquery": {
+      "vendors": "jquery.min.js"
+    },
+    "bxslider-4": {
+      "modules": "dist/jquery.bxslider.min.js"
+    },
+    "malihu-custom-scrollbar-plugin": {
+      "modules": "jquery.mCustomScrollbar.concat.min.js"
+    }
+  }
+}

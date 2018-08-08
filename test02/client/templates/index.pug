@@ -1,0 +1,165 @@
+doctype html
+html(lang="en")
+  include includes/head
+  body
+    .wrapper
+      include includes/header
+      .slider
+        span.slider__control.slider__control--next
+        span.slider__control.slider__control--prev
+        .slider__list
+          mixin sliderData(title, info)
+            .slider__slide
+              .slider__holder
+                h2.slider__title #{title} 
+                span.slider__info #{info}
+          +sliderData("VESTIBULUM", "Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.")
+          +sliderData("VESTIBULUM", "Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis.")
+          +sliderData("VESTIBULUM", "Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis.")
+
+      .promo.container
+        .row
+          .promo__info.col-xs-12.col-sm-8.col-md-9
+            h2.
+              Some of our top services
+            p.
+              Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo. 
+          .promo__btn-holder.col-xs-12.col-sm-4.col-md-3
+            a.btn.btn--alt.btn--uppercase(href="#").
+              VIEW MORE
+
+      .info.container
+        .row
+          .info__block.active.col-xs-12.col-sm-6.col-md-3.col-lg-3
+            .info__holder
+              span.info__icon(data-icon-left='icon-thumbs')
+              h3 SUSPENDISSE
+              p.
+                 Quisque id tellus quis risus vehicula vehicula ut turpis. In eros nulla, placerat vitae at, vehicula ut nunc.
+              a.btn.info__btn.
+                read more
+          .info__block.col-xs-12.col-sm-6.col-md-3.col-lg-3
+            .info__holder
+              span.info__icon(data-icon-left='icon-key')
+              h3 MAECENAS 
+              p.
+                 Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
+              a.btn.info__btn.
+                read more
+          .info__block.col-xs-12.col-sm-6.col-md-3.col-lg-3
+            .info__holder
+              span.info__icon(data-icon-left='icon-flag')
+              h3 ALIQUAM 
+              p.
+                 Vivamus eget ante bibendum arcu vehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non. 
+              a.btn.info__btn.
+                read more
+          .info__block.col-xs-12.col-sm-6.col-md-3.col-lg-3
+            .info__holder
+              span.info__icon(data-icon-left='icon-flask')
+              h3 HABITASSE 
+              p.
+                 Astehicula ultricies. Integer venenatis mattis nisl, vitae pulvinar dui tempor non. 
+              a.btn.info__btn.
+                read more
+
+      section.content.container-fluid
+        .container
+          hgroup.align-center
+            h1 WHY MODUS VERSUS?
+            p.
+              Capacitance cascading integer reflective interface data development high bus cache dithering transponder.
+
+        .container.images
+          .row
+            .images__holder.images__holder--main.col-xs-12.col-sm-8.col-md-6.col-lg-6.col-sm-offset-2.col-md-offset-0
+              .images__frame
+                img(src='../static/images/img02.jpg', alt='')
+                span.images__tools
+                span.images__closer
+            .images__holder.col-xs-12.col-sm-6.col-md-4.col-lg-4
+              .images__frame
+                img(src='../static/images/img01.jpg', alt='')
+                span.images__tools
+                span.images__closer
+            .images__holder.col-xs-12.col-sm-6.col-md-4.col-lg-4.col-md-offset-4.col-lg-offset-4
+              .images__frame
+                img(src='../static/images/img01.jpg', alt='')
+                span.images__tools
+                span.images__closer
+
+        .wrap.container.container--indent
+          .row
+            .col.col-ie-lg-3.col-xs-12.col-sm-12.col-md-12.col-lg-3
+              h3.
+                Why Choose Us ?
+
+              - var listItems = ["Quisque at massa ipsum", "Maecenas a lorem augue, egestas", "Cras vitae felis at lacus eleifend", "Etiam auctor diam pellentesque", "Nulla ac massa at dolor", "Condimentum eleifend vitae vitae"];
+                ul.list
+                  for item in listItems
+                    li.list__item(data-icon-left='icon-bullet')= item
+            .col.col-ie-lg-6.col-xs-12.col-sm-12.col-md-12.col-lg-6
+              p
+                | Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus 
+                a(href='#') vehicula mattis
+                | . Nulla ac massa at dolor condimentum eleifend vitae vitae urna.
+              .progress-holder.row
+                .progress.col-xs-6.col-sm-3
+                  .progress-bar
+                    .progress-bar__fill
+                  span.progress__value 50
+                  strong.progress__name.
+                    SUSPENDISSE
+                .progress.col-xs-6.col-sm-3
+                  .progress-bar
+                    .progress-bar__fill
+                  span.progress__value 70
+                  strong.progress__name.
+                    MAECENAS
+                .progress.col-xs-6.col-sm-3
+                  .progress-bar
+                    .progress-bar__fill
+                  span.progress__value 80
+                  strong.progress__name.
+                    ALIQUAM
+                .progress.col-xs-6.col-sm-3
+                  .progress-bar
+                    .progress-bar__fill
+                  span.progress__value 100
+                  strong.progress__name.
+                    HABITASSE
+
+            .col.col-ie-lg-3.col-xs-12.col-sm-12.col-md-12.col-lg-3
+              h3.
+                What Client’s Say ?
+              .quote
+                blockquote
+                  em.
+                    Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus vehicula mattis.
+                  | Nulla ac massa at dolor condimentum
+                cite.
+                  Jhon Doe
+
+        .container.container--indent
+          h3.
+            Our Happy Clients
+          .gallery
+            img(src='../static/images/img03.jpg', alt='')
+            img(src='../static/images/img03.jpg', alt='')
+            img(src='../static/images/img03.jpg', alt='')
+            img(src='../static/images/img03.jpg', alt='')
+            img(src='../static/images/img03.jpg', alt='')
+            img(src='../static/images/img03.jpg', alt='')
+            img(src='../static/images/img03.jpg', alt='')
+            img(src='../static/images/img03.jpg', alt='')
+            img(src='../static/images/img03.jpg', alt='')
+            img(src='../static/images/img03.jpg', alt='')
+            img(src='../static/images/img03.jpg', alt='')
+            img(src='../static/images/img03.jpg', alt='')
+
+
+      include includes/footer
+
+    //[if IE 8]><script type="text/javascript" src="../static/js/main.js"></script><![endif]
+    script(src='../static/js/main-min.js', type='text/javascript')
+        

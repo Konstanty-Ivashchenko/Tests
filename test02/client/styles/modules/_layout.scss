@@ -1,0 +1,306 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  color: $base-color;
+  background-color: $base-bg;
+  font: $base-font;
+  min-width: 320px;
+  margin: 0;
+}
+
+.wrapper {
+	overflow: hidden;
+	position: relative;
+}
+
+.promo {
+	background: #ececec;
+	border-radius: 5px;
+	color: $dark-gray;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 50px;
+
+	&__btn-holder {
+		text-align: center;
+	}
+
+	.row {
+		font-size: 0;
+		line-height: 0;
+		letter-spacing: -5px;
+	}
+
+	&__info,
+	&__btn-holder {
+		display: inline-block;
+		vertical-align: middle;
+		font: $base-font;
+		letter-spacing: 0;
+		float: none;
+	}
+
+	&__info {
+		margin-bottom: 30px;
+		text-align: center;
+
+		@media screen and (min-width: $tablet-viewport) {
+			margin: 0;
+			text-align: left;
+		}
+	}
+
+	h2 {
+		margin: 0 0 5px;
+	}
+
+	p {
+		margin: 0;
+	}
+}
+
+.info {
+	margin-bottom: 80px;
+	position: relative;
+	text-align: center;
+	line-height: 20px;
+
+	&__block {
+		margin-bottom: 50px;
+	}
+
+	&__holder {
+		background: #f8f8f8;
+		border-radius: 5px;
+		box-shadow: 0 3px 0 0 #e5e6e6;
+		padding: 45px 10px 40px;
+
+		.active & {
+			background: $white;
+		}
+	}
+
+	&__icon {
+		color: $light-green;
+		display: block;
+		font-size: 60px;
+		width: 60px;
+		height: 60px;
+		margin: 0 auto 10px;
+
+		.active & {
+			color: $red;
+		}
+	}
+
+	h3 {
+		text-transform: uppercase;
+	}
+
+	p {
+		margin: 0 0 20px;
+
+		@media screen and (min-width: $tablet-viewport) {
+			min-height: 80px;
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0);
+		margin: 0 0 -25px;
+
+		.active & {
+			@extend .btn--alt;
+		}
+	}
+}
+
+.content {
+	position: relative;
+	padding-top: 60px;
+
+	&:before {
+		content: '';
+		background: $content-bg;
+		z-index: 1;
+		height: 400px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	&:after {
+		content: '';
+		z-index: 2;
+		height: 17px;
+		background: url('../images/bg.png') repeat-x 0 -9px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	> .container {
+		position: relative;
+		z-index: 3;
+	}
+}
+
+.images {
+	margin-bottom: 50px;
+	position: relative;
+
+	@media screen and (min-width: $laptop-viewport) {
+		padding-top: 60px;
+		padding-bottom: 40px;
+	}
+
+	&__holder {
+		margin-bottom: 30px;
+
+		@media screen and (min-width: $laptop-viewport) {
+			margin-bottom: 0;
+		}
+
+		&--main {
+			@media screen and (min-width: $laptop-viewport) {
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+				z-index: 2;
+			}
+		}
+	}
+
+	&__frame {
+		padding: 42px 5px 4px;
+		background: $images-bg;
+		position: relative;
+		border-radius: 10px;
+
+		.images__holder--main & {
+			padding-top: 46px;
+		}
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+	}
+
+	&__tools {
+		position: absolute;
+		top: 14px;
+		left: 15px;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: $content-bg;
+
+		&:before, &:after {
+			content: '';
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background: $content-bg;
+			position: absolute;
+			top: 0;
+			left: 20px;
+		}
+
+		&:after {
+			left: 40px;
+		}
+	}
+
+	&__closer {
+		position: absolute;
+		top:20px;
+		right: 15px;
+		width: 12px;
+		height: 6px;
+		border-radius: 10px;
+		background: $content-bg;
+	}
+}
+
+
+.wrap {
+	line-height: 2;
+
+	p {
+		margin: 0 0 50px;
+	}
+}
+
+.container--indent {
+	margin-bottom: 50px;
+}
+
+.progress{
+	position: relative;
+	text-align: center;
+	margin-bottom: 30px;
+
+	@media screen and (min-width: $tablet-viewport) {
+		margin-bottom: 0;
+	}
+
+  	&-bar{
+		position: relative;
+		overflow: hidden;
+		width: 120px;
+		height: 60px;
+		margin: 0 auto -35px;
+
+		&__fill{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			box-sizing: border-box;
+			border: 15px solid $dark-red;
+			border-bottom-color: $light-green;
+			border-right-color: $light-green;
+		}
+	}
+
+	&__value {
+		font-weight: 800;
+		font-size: 30px;
+		line-height: 1.2;
+		display: block;
+		margin: 0 auto 20px;
+		width: 120px;
+	}
+
+	&__name {
+		font-weight: 800;
+		font-size: 16px;
+		line-height: 1.2;
+		display: block;
+		width: 120px;
+		margin: 0 auto;
+	}
+}
+
+.col {
+	margin-bottom: 50px;
+
+	@media screen and (min-width: $desktop-viewport) {
+		margin-bottom: 0;
+	}
+}

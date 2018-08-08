@@ -1,0 +1,276 @@
+.wrapper {
+  min-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__holder {
+  max-width: 1160px;
+  padding: 25px 20px;
+  position: relative;
+}
+
+.main-logo {
+  font-size: 30px;
+  line-height: 36px;
+  float: left;
+}
+.main-logo span {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.search-form-opener {
+  width: 35px;
+  height: 30px;
+  padding: 0;
+  min-width: 0;
+  background: none;
+  border: none;
+  float: right;
+  position: relative;
+  margin: 3px 0 0 15px;
+  top: 0;
+  right: 0;
+}
+.search-form-opener:hover, .search-form-opener:focus {
+  background: none;
+  border: none;
+}
+.search-form-opener span {
+  position: absolute;
+  color: #fff;
+  font-size: 18px;
+  line-height: 18px;
+  top: 6px;
+  left: 8px;
+}
+.search-form-opener .front {
+  opacity: 1;
+  z-index: 2;
+}
+.search-form-opener .back {
+  display: none;
+}
+
+.search-form-opener--opening .front {
+  opacity: 1;
+}
+.search-form-opener--opening .back {
+  display: none;
+}
+
+.search-form {
+  position: absolute;
+  top: 100%;
+  background: #e2534b;
+  padding: 10px;
+  right: -9999px;
+  opacity: 0;
+  z-index: 10;
+  width: 250px;
+  top: 58px;
+}
+
+.search-form--opening {
+  right: 13px;
+}
+
+.search-form__btn:before {
+  margin-top: -2px;
+}
+
+.nav {
+  position: static;
+  opacity: 1;
+  float: right;
+  width: auto;
+  background: none;
+  padding-top: 3px;
+}
+
+.nav-opener {
+  display: none;
+}
+
+.nav__list {
+  float: right;
+  margin: 0;
+}
+.nav__list li {
+  float: left;
+  margin: 0 0 0 15px;
+}
+.nav__list li:first-child {
+  margin: 0;
+}
+.nav__list li a {
+  color: #fff;
+  border-radius: 5px;
+  position: relative;
+  padding: 7px 14px;
+  float: left;
+  background: none;
+}
+.nav__list li a:hover {
+  background: #e8645a;
+  box-shadow: 0 3px 0 0 #e2534b;
+}
+.nav__list li.active a {
+  background: #62a29e;
+}
+.nav__list li.active a:hover {
+  background: #62a29e;
+}
+.nav__list li.has-drop > a {
+  padding-left: 30px;
+}
+.nav__list li.has-drop > a:hover {
+  background: #e8645a;
+}
+.nav__list li.has-drop > a:after {
+  top: 10px;
+}
+.nav__list li.has-drop.has-drop--open > a {
+  background: #e8645a;
+}
+.nav__list li.has-drop.has-drop--open > a:after {
+  content: "\f077";
+}
+.nav__list li.has-drop.has-drop--open > a:before {
+  display: none;
+}
+.nav__list li.has-drop.has-drop--open .nav__drop {
+  display: block;
+  left: 0;
+  opacity: 1;
+}
+
+.nav__drop {
+  list-style: none;
+  text-transform: none;
+  position: absolute;
+  top: 100%;
+  margin: 0;
+  background: #e2534b;
+  padding: 5px;
+  left: -9999px;
+  opacity: 0;
+  display: block;
+}
+.nav__drop li {
+  float: none;
+  margin: 5px 0 0;
+}
+.nav__drop li:first-child {
+  margin: 0;
+}
+.nav__drop li a {
+  float: none;
+  white-space: nowrap;
+  padding: 7px 10px 7px 25px;
+  background: #e8645a;
+}
+.nav__drop li a:hover {
+  background: #76c7c0;
+}
+.nav__drop li a:after {
+  top: 10px;
+}
+
+.container {
+  width: 1170px;
+  padding: 20px 15px;
+}
+
+.info__block {
+  width: 292px;
+  padding: 0 15px;
+}
+
+.info__btn {
+  left: 25px;
+}
+
+.images {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+.images__holder {
+  margin-bottom: 0;
+  width: 30%;
+  padding: 0 1%;
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+.images__holder--main {
+  width: 34%;
+}
+.images__frame {
+  padding: 42px 5px 4px;
+  background: #b0b8b9;
+  position: relative;
+  border-radius: 10px;
+}
+.images__holder--main .images__frame {
+  padding-top: 46px;
+}
+
+.col {
+  margin-bottom: 0;
+}
+
+.col-ie-lg-3 {
+  width: 25%;
+}
+
+.col-ie-lg-6 {
+  width: 50%;
+}
+
+.gallery {
+  padding: 20px 0 0;
+  height: 110px;
+}
+
+.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+  top: -60px;
+  left: 170px;
+}
+
+.footer .col {
+  margin-bottom: 0;
+  width: 33.3%;
+}
+.footer .main-logo {
+  text-align: left;
+}
+
+.footer__frame {
+  text-align: left;
+}
+
+.copy {
+  margin: 0;
+}
+
+.social-list {
+  float: right;
+}
+
+.footer__frame .col {
+  float: right;
+}
+.footer__frame .col:first-child {
+  float: left;
+}
+
+.blog-list__img:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  margin: -25px 0 0;
+}
+
+/*# sourceMappingURL=base-ie.css.map */

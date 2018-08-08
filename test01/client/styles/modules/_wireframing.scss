@@ -1,0 +1,206 @@
+.wireframing {
+  background: url(../images/bg-wireframing.gif);
+  color: $white;
+
+  &__holder {
+    margin: 0 0 80px;
+    position: relative;
+    text-align: center;
+
+    .wireframing__block:after,
+    .wireframing__block:before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+    }
+
+    .wireframing__block:before {
+      width: 2px;
+      height: 30px;
+      background: $white;
+      margin: 20px 0 0 -1px;
+    }
+
+    .wireframing__block:after {
+      width: 0; 
+      height: 0; 
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 14px solid $white;
+      margin: 50px 0 0 -4px;
+    }
+
+    &--clear {
+      .wireframing__block:before,
+      .wireframing__block:after {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      &--01,
+      &--05 {
+        .wireframing__block:after,
+        .wireframing__block:before {
+          top: 50%;
+          left: 100%;
+        }
+
+        .wireframing__block:before {
+          width: 80px;
+          height: 2px;
+          margin: -1px 0 0 16px;
+        }
+
+        .wireframing__block:after {
+          border-top: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+          border-left: 14px solid $white;
+          margin: -4px 0 0 84px;
+        }
+      }
+
+      &--03 {
+        .wireframing__block:after,
+        .wireframing__block:before {
+          top: 50%;
+          right: 100%;
+          left: auto;
+        }
+
+        .wireframing__block:before {
+          width: 80px;
+          height: 2px;
+          margin: -1px 16px 0 0;
+        }
+
+        .wireframing__block:after {
+          border-top: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+          border-right: 14px solid $white;
+          margin: -4px 84px 0 0;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      &--01 {
+        .wireframing__block:after,
+        .wireframing__block:before {
+          right: 124px;
+          top: 100%;
+          left: auto;
+        }
+
+        .wireframing__block:before {
+          width: 2px;
+          height: 30px;
+          margin: 25px 0 0 0;
+        }
+
+        .wireframing__block:after {
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-top: 14px solid $white;
+          border-bottom: 0;
+          margin: 50px -3px 0 0;
+        }
+      }
+
+      &--05,
+      &--06 {
+        .wireframing__block:after,
+        .wireframing__block:before {
+          top: 50%;
+          left: 100%;
+        }
+
+        .wireframing__block:before {
+          width: 60px;
+          height: 2px;
+          margin: -1px 0 0 16px;
+        }
+
+        .wireframing__block:after {
+          border-top: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+          border-left: 14px solid $white;
+          margin: -4px 0 0 64px;
+        }
+      }
+
+      &--02,
+      &--03 {
+        .wireframing__block:after,
+        .wireframing__block:before {
+          top: 50%;
+          right: 100%;
+          left: auto;
+        }
+
+        .wireframing__block:before {
+          width: 60px;
+          height: 2px;
+          margin: -1px 16px 0 0;
+        }
+
+        .wireframing__block:after {
+          border-top: 4px solid transparent;
+          border-bottom: 4px solid transparent;
+          border-right: 14px solid $white;
+          margin: -4px 64px 0 0;
+        }
+      }
+
+      &--01,
+      &--02,
+      &--07 {
+        text-align: right;
+      }
+
+      &--04,
+      &--05 {
+        text-align: left;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      &--05,
+      &--06 {
+        .wireframing__block:before {
+          width: 80px;
+          margin: -1px 0 0 46px;
+        }
+
+        .wireframing__block:after {
+          margin: -4px 0 0 124px;
+        }
+      }
+
+      &--02,
+      &--03 {
+        .wireframing__block:before {
+          width: 80px;
+          margin: -1px 46px 0 0;
+        }
+
+        .wireframing__block:after {
+          margin: -4px 124px 0 0;
+        }
+      }
+    }
+  }
+
+  &__block {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__img {
+    max-width: 100%;
+    width: 249px;
+    vertical-align: top;
+  }
+}
